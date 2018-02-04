@@ -2,6 +2,8 @@ from telegram.ext import Updater, MessageHandler, Filters
 import logging
 from random import choice
 
+from secret_data import TOKEN
+
 # Enable logging
 logging.basicConfig(format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
                     level=logging.INFO)
@@ -64,7 +66,7 @@ def error(bot, update, error):
 
 
 def main():
-    updater = Updater("527780448:AAHtJ4iAI3VKaCjFtg0A5JuQqb2GNtEkgaQ")
+    updater = Updater(TOKEN)
 
     dp = updater.dispatcher
 
